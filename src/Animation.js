@@ -1,20 +1,20 @@
 import React,{useContext} from 'react'
 import { useState,useEffect} from 'react'
 import Axios from 'axios'
-import Filter from './Filter'
-import AnimeDetails from './AnimeDetails'
-import {myContext} from "./app"
-import AnimationDefault from './AnimationDefault'
-
-
-
-  
-
+import Filter from './Filter/Filter'
+import AnimeDetails from './AnimeDetails/AnimeDetails'
+ import AnimationDefault from './AnimationDefault/AnimationDefault'
+import { myContext } from "./app";
+ 
 
 const Animation = () => {
+  
+   
+
   const {state}=useContext(myContext)
 
- 
+  const watchListLocatStorage = localStorage.getItem("watchlist") 
+  const watchListData=  JSON.parse(watchListLocatStorage)
  
 
      const [data,setData]=useState({datA:[]}) 
@@ -35,7 +35,7 @@ const Animation = () => {
   return (
     <div>
        <div>
-      <div className=' ' style={{backgroundColor:"  rgb(27, 22, 22)" ,margin:"30px" }} >
+      <div className=' ' style={{backgroundColor:"  rgb(27, 22, 22)" ,margin:"30px"  }}>
           <div className='row'>
             <div className='col-md-8'>
             {state.displayData != null ? <>

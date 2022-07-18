@@ -2,7 +2,7 @@ import React from 'react'
 import { useReducer,createContext} from "react"
 import {NavBar } from './Navbar'   
 import Animation from './Animation';
-import Watchlist from './Watchlist';
+import Watchlist from './Watchlist/Watchlist';
 
 import { BrowserRouter as Router,Route,Switch } from 'react-router-dom'
 import Reducer from './Reducer'

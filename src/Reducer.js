@@ -37,6 +37,8 @@ const Reducer=(state,action)=>{
         case "disabled":
 
             return {...state,disaBlied:action.payload}    
+
+          
             
     }}
 

@@ -1,5 +1,5 @@
 import React,{useContext,  useEffect} from "react";
-import {myContext} from "./app"
+import {myContext} from "../app"
 import "./AnimeDetailsCSS.css"
  
 const AnimeDetails = ()=>{
@@ -16,7 +16,7 @@ const AnimeDetails = ()=>{
             payload:res,
               }) 
               if(state.watchArray != []){
-              localStorage.setItem("watchlist",JSON.stringify(state.watchArray))
+               localStorage.setItem("watchlist",JSON.stringify(state.watchArray))
               }
 
 

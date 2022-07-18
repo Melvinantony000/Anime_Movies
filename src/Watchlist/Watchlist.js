@@ -1,5 +1,5 @@
 import React, { useContext} from "react";
-import { myContext } from "./app";
+import { myContext } from "../app";
 import "./WatchlistCSS.css"
 
 const Watchlist =()=>{
@@ -17,8 +17,7 @@ const Watchlist =()=>{
               })
         }
             
- 
-    return(
+     return(
      <div className="head_tag">
                 <p className="head_text">Watchlist</p>
 
