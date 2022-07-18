@@ -29,7 +29,7 @@ const Watchlist =()=>{
                     
                     watchListData.map((res)=>{
                 return(
-                        <div className="col-md-3">
+                        <div className="col-md-3" key={res.mal_id}>
                     <div className="card card_style"  >
                     <img className="card-img-top img_style" src={res.images.jpg.large_image_url} alt="Card image cap"/>
                     <div className="card-body  ">

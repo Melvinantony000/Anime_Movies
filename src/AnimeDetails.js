@@ -15,7 +15,9 @@ const AnimeDetails = ()=>{
             type:"add",
             payload:res,
               }) 
+              if(state.watchArray != []){
               localStorage.setItem("watchlist",JSON.stringify(state.watchArray))
+              }
 
 
               

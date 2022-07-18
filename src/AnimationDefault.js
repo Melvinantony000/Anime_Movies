@@ -10,7 +10,7 @@ const AnimationDefault = ({data}) => {
       <div className='posters'>
         {data.map((res)=>{
           return(
-            <div className=' '>
+            <div className=' 'key={res.mal_id}>
               {res.title_english != null ? <>
           <img className='poster' alt='poster' src={res.images.jpg.large_image_url}/>
           <p className='title_text'>{res.title_english}</p>
