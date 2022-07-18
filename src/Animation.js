@@ -1,16 +1,19 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import { useState,useEffect} from 'react'
 import Axios from 'axios'
 import Filter from './Filter'
 import AnimeDetails from './AnimeDetails'
- 
+import {myContext} from "./app"
+import AnimationDefault from './AnimationDefault'
+
 
 
   
 
 
 const Animation = () => {
-  
+  const {state}=useContext(myContext)
+
  
  
 
@@ -35,7 +38,12 @@ const Animation = () => {
       <div className=' ' style={{backgroundColor:"  rgb(27, 22, 22)" ,margin:"30px" }} >
           <div className='row'>
             <div className='col-md-8'>
-            <AnimeDetails />
+            {state.displayData != null ? <>
+              <AnimeDetails /> 
+            </> :  
+                         <AnimationDefault data={data.datA}/>
+
+}
 
             </div>
             <div className='col-md-4'>
