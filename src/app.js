@@ -13,7 +13,7 @@ const App = ()=>{
   const[state,dispatch]=useReducer(Reducer,{data:[],disaBlied:false,watchArray:[],displayData:null}) 
   return ( 
     <myContext.Provider value={{state,dispatch}}> 
-      <Router >
+      <Router>
           <NavBar /> 
          <Switch>
           <Route path="/Animation" component={Animation} />

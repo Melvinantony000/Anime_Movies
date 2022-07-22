@@ -9,28 +9,20 @@ import { myContext } from "./app";
 
 const Animation = () => {
   
-   
-
   const {state}=useContext(myContext)
 
-  const watchListLocatStorage = localStorage.getItem("watchlist") 
-  const watchListData=  JSON.parse(watchListLocatStorage)
- 
-
+  
      const [data,setData]=useState({datA:[]}) 
         var url="https://api.jikan.moe/v4/anime"; 
        
 
-        useEffect(()=>{
-
+        useEffect(()=>{ 
             Axios.get(url).then((res)=>{ 
                 setData({...data,datA : res.data.data}) 
-       }).catch(()=>{})
-
+       }).catch(()=>{}) 
         },)
  
-
-          
+ 
 
   return (
     <div>

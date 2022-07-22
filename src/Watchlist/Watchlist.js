@@ -1,31 +1,47 @@
-import React, { useContext} from "react";
-import { myContext } from "../app";
-import "./WatchlistCSS.css"
+import React, { useState,useEffect } from "react";
+ import "./WatchlistCSS.css"
 
 const Watchlist =()=>{
 
-    const {dispatch} =useContext(myContext);
-
+ 
     const watchListLocatStorage = localStorage.getItem("watchlist") 
     const watchListData=  JSON.parse(watchListLocatStorage)
- 
+    
+    const [state,setState]=useState("")
     
     const  removeHandler = (res)=>{ 
-           dispatch({
-               type:"remove",
-               payload:res
-              })
-        }
-            
+ 
+     var watchData=JSON.parse(localStorage.getItem("watchlist"));
+
+     const filFun =(responce)=>{
+
+         if(watchData === null){
+            localStorage.setItem("watchlist","[]")
+          }
+         if(responce.mal_id === res.mal_id){
+           return false;
+         }else{
+         return true;
+    }
+    }
+     const removeObj=watchData.filter((filFun))
+     localStorage.setItem("watchlist",JSON.stringify(removeObj))
+     setState(res)
+        } 
+
+        useEffect(()=>{
+
+        },[state])
+
      return(
      <div className="head_tag">
+        {console.log("dfsvkjfad")}
                 <p className="head_text">Watchlist</p>
 
         <div className="main_tag">
 
             <div className="row">
-                     {
-                    
+                     {  
                     watchListData.map((res)=>{
                 return(
                         <div className="col-md-3" key={res.mal_id}>
@@ -39,14 +55,9 @@ const Watchlist =()=>{
                   </div> 
                         </div>
                         )
-                    })} 
-                      
-             
-
+                    })}  
             </div>
-        </div>
-        
-              
+        </div> 
            <div style={{height:"390px"}}></div>
     </div>
      )

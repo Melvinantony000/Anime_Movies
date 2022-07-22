@@ -11,16 +11,14 @@ const AnimeDetails = ()=>{
  
     const buttonHandler = (res)=>{ 
 
-        dispatch({
-            type:"add",
-            payload:res,
-              }) 
-              if(state.watchArray != []){
-               localStorage.setItem("watchlist",JSON.stringify(state.watchArray))
-              }
+    if((localStorage.getItem('watchlist') == null)){
+        localStorage.setItem("watchlist",'[]')
+    }
+        const updated_data=JSON.parse(localStorage.getItem("watchlist"));
+        updated_data.push(res)
 
-
-              
+       localStorage.setItem("watchlist",JSON.stringify(updated_data))
+    
         dispatch({
             type:"disabled",
             payload:true

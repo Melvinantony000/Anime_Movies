@@ -26,6 +26,7 @@ const NavBar=()=>{
        </form>
      </nav>
      </div>
+      
        </div>
      
      )
