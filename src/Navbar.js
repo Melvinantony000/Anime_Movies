@@ -12,15 +12,11 @@ const NavBar=()=>{
         
         
          <li className="nav-item active">
-         <Link className="nav-link text-white" style={{fontSize:"20px"}} to="/Animation">Animation </Link>
+         <Link className="nav-link text-white" style={{fontSize:"20px"}} to="/">Animation </Link>
          </li>
          <li className="nav-item active">
          <Link className="nav-link text-white" style={{fontSize:"20px"}} to="/Watchlist">Watchlist </Link>
-         </li>
-               
-              
-                
-              
+         </li> 
              </ul>
          
        </form>

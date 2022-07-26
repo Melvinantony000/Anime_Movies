@@ -3,7 +3,9 @@ import React, { useState,useEffect } from "react";
 
 const Watchlist =()=>{
 
- 
+    if((localStorage.getItem('watchlist') == null)){
+      localStorage.setItem("watchlist",'[]')
+      }
     const watchListLocatStorage = localStorage.getItem("watchlist") 
     const watchListData=  JSON.parse(watchListLocatStorage)
     
@@ -35,8 +37,7 @@ const Watchlist =()=>{
 
      return(
      <div className="head_tag">
-        {console.log("dfsvkjfad")}
-                <p className="head_text">Watchlist</p>
+                 <p className="head_text">Watchlist</p>
 
         <div className="main_tag">
 

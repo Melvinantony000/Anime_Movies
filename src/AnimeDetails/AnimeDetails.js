@@ -32,9 +32,9 @@ const AnimeDetails = ()=>{
                 <div className="col-md-6">
                 <img className=" img_tag" src={state.displayData.images.jpg.large_image_url} alt="Card image cap"/>
 
-                <button className="watchList_Btn" type="button" onClick={()=>{window.open(`${state.displayData.trailer.url},asd`)}} >watch Trailer</button>
+                <button className="watchList_Btn" type="button" onClick={()=>{window.open(`${state.displayData.trailer.url},asd`)}} >Watch Trailer</button>
                       
-                     <button className="watchList_Btn" disabled = {state.disaBlied} onClick={buttonHandler.bind(this,state.displayData)}>Add to watchList</button>
+                     <button className="watchList_Btn" disabled = {state.disaBlied} onClick={buttonHandler.bind(this,state.displayData)}>Add to Watchlist</button>
 
                    
                      

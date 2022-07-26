@@ -4,7 +4,7 @@ import {NavBar } from './Navbar'
 import Animation from './Animation';
 import Watchlist from './Watchlist/Watchlist';
 
-import { BrowserRouter as Router,Route,Switch } from 'react-router-dom'
+import { BrowserRouter as Router,Route} from 'react-router-dom'
 import Reducer from './Reducer'
 
 export const myContext=createContext()
@@ -15,10 +15,8 @@ const App = ()=>{
     <myContext.Provider value={{state,dispatch}}> 
       <Router>
           <NavBar /> 
-         <Switch>
-          <Route path="/Animation" component={Animation} />
+          <Route path="/" exact component={Animation} />
           <Route path="/Watchlist" component={Watchlist} />
-        </Switch>
       </Router>
     </myContext.Provider>
 
