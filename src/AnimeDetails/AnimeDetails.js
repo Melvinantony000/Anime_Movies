@@ -17,11 +17,11 @@ const AnimeDetails = ()=>{
         const updated_data=JSON.parse(localStorage.getItem("watchlist"));
         updated_data.push(res)
 
-        const remv_dup = updated_data.filter((item,index)=>{
-            return updated_data.findIndex(obj=>obj.id === item.id) === index
-            })
+        // const remv_dup = updated_data.filter((item,index)=>{
+        //     return updated_data.findIndex(obj=>obj.id === item.id) === index
+        //     })
 
-       localStorage.setItem("watchlist",JSON.stringify(remv_dup))
+       localStorage.setItem("watchlist",JSON.stringify(updated_data))
     
         dispatch({
             type:"disabled",
