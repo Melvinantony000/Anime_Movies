@@ -65,13 +65,8 @@
     outline: 0;
     background:#e4f041;
      box-shadow: 0 0 0 2px rgba(245, 241, 241, 0.2), 0 3px 8px 0 rgba(250, 248, 248, 0.15);
-  } */
+  }  
   
-   .watchList_Btn:disabled {
-     filter: saturate(0.2) opacity(0.5);
-    -webkit-filter: saturate(0.2) opacity(0.5);
-    cursor: not-allowed;
-  }
 .trailer_btn{
     
     width: 125px;
@@ -82,8 +77,7 @@
     height: 40px;
     color:black;
     background-color: rgb(226, 226, 5);
-     /* border-color: aliceblue;  */
-    border-radius: 6px;
+     border-radius: 6px;
 
 }
 
